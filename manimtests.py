@@ -1,5 +1,5 @@
 from manim import *
-
+import numpy as np
 
 class TestAnimation(Scene):
     def construct(self):
@@ -26,3 +26,10 @@ class CoordinateTest(Scene):
         star = Star(n=7).shift(2 * UP)
 
         self.add(dot, square, triangle, circle, star)
+
+class MovementAnimation(Scene):
+    def construct(self):
+        dot = Dot(radius = 0.16, color = "#AE00FF")
+        self.play(Create(dot))
+        self.play(dot.animate.shift(2 * RIGHT))
+        self.play(dot.animate.set_color("#00AEFF"))
