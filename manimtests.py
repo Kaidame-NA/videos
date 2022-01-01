@@ -15,3 +15,14 @@ class TestAnimation(Scene):
         self.wait(0.5)
 
         self.play(FadeOut(circle))
+
+
+class CoordinateTest(Scene):
+    def construct(self):
+        dot = Dot(radius=0.16, color="#00AEFF")
+        square = Square().shift(2 * LEFT)
+        triangle = Triangle().shift(2 * RIGHT)
+        circle = Circle().shift(2 * DOWN)
+        star = Star(n=7).shift(2 * UP)
+
+        self.add(dot, square, triangle, circle, star)
