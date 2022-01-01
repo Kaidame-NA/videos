@@ -33,3 +33,10 @@ class MovementAnimation(Scene):
         self.play(Create(dot))
         self.play(dot.animate.shift(2 * RIGHT))
         self.play(dot.animate.set_color("#00AEFF"))
+
+class TextAnimate(Scene):
+    def construct(self):
+        text=Tex(r"Hello World", font_size=144)
+        self.play(Write(text))
+
+        self.add(text)
